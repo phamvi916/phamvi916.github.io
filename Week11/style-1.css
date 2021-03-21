@@ -1,0 +1,28 @@
+#web{
+    background-image: url('https://www.levistrauss.com/wp-content/uploads/2020/05/Black_Box.png');
+    height: 100%;
+}
+
+
+.nav-bar{
+    background-color:rgba(42, 165, 149, 0.829);
+    display: flex;
+    align-items: center;
+    width: 150%;
+    position:fixed; top:0;
+    font-size: 20px; 
+    padding-bottom: 7px;  
+    padding-top: 7px;
+    color: lightskyblue;
+    margin-left: -10px;
+}
+
+.flexboard{
+    display: f;
+}
+
+.-body-{
+    width: 100%;
+    display: flex;
+    margin: 20 
+}

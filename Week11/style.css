@@ -1,0 +1,172 @@
+.nav-bar{
+    background-color:rgba(42, 165, 149, 0.829);
+    display: flex;
+    align-items: center;
+    width: 150%;
+    position:fixed; top:0;
+    font-size: 20px; 
+    padding-bottom: 7px;  
+    padding-top: 7px;
+    color: lightskyblue;
+}
+
+#web{
+    background-image: url('https://www.levistrauss.com/wp-content/uploads/2020/05/Black_Box.png');
+    height: 100%;
+}
+.product-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100px;
+}
+.product-name{
+    font-size: small;
+    text-align: center;
+    margin: 0 10px;
+    text-decoration: none;
+    color:black
+
+}
+.product-cost{
+    text-align: center;
+}
+.text-bold{
+    font-weight: bold;
+}
+.product-color{
+    text-align: center;
+}
+.product-div{
+    border: 5px solid yellowgreen;
+    height: 40%;
+    width:15%;
+    text-align:left;
+    margin-left:85px;
+    margin-right: 0px;
+    margin-top:50px;
+ 
+    
+}
+
+.text-color{
+    color:#555;
+    
+}
+.flex-container{
+    flex: 4;
+    display: flex;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.footer-container{
+    
+    font-size: 5px;
+    justify-content: center;
+   margin: 10px 5%;
+   text-align: left;
+  
+   
+}
+.footer-item{
+    width: 100%;
+    padding: 0 10px;
+    font-size: 7px;
+}
+a{
+    margin: 0 10px;
+}
+.product-detail-container{
+    display: flex;
+}
+.product-detail-img{
+    
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 350px;
+    
+}
+.detail-display{
+    width: 30%;
+    padding:0 5%;
+}
+.text-center{
+    text-align: center;
+}
+.product-display{
+    margin-right: 20px;
+    width: 70%;
+}
+select{
+    width: 100px;
+    font-size: 15px;
+    border-radius: 5px solid;
+}
+.button{
+    width: 150px;
+    height: 50px;
+    background-color: burlywood;
+    border-radius: 7%;}
+
+
+
+.web-bg{
+    background-image: url("https://wallpaperaccess.com/full/826469.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+}
+
+.version{
+    justify-content: center;
+    background-color: lightcoral;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+.product-div a p:hover{
+    text-align: center;
+    margin: 0 10px;
+    text-decoration: none;
+    color:black;
+    background-color: lightcoral;
+
+}
+.menu-a{
+    margin:0 10px
+}
+.poster{
+    top: 30px;
+    margin-left: 0px;
+    width: 1500px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 0%;
+    margin-top: 70px;
+}
+.made-nam{
+    text-align: center;
+    background-color: lightgray;
+}
+.sp{
+    text-decoration: none;
+    color:black
+}
+.sp:hover{
+    text-decoration: underline;
+}   
+.picture-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutus{
+    background-image: url('./aboutus.png');
+    
+    background-size:130%;
+}

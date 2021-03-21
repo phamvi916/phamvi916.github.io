@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="style01.css">
+</head>
+<body id="web">
+    <div class="nav-bar">
+        <a href="./shopweb.html" class="sp" style="padding:0 10px 0px 30px; top:0; color: darkblue;">Home</a>
+        <a href="" class="sp" style="padding:0 10px 0px 20px; color: darkblue;">Songs</a>
+        <a href="./product.html" class="sp" style="padding:0 10px 0px 20px; color: darkblue;">Proucts</a>
+        <a href="" class="sp" style="padding:0 10px 0px 20px; color: darkblue;">Web's Info</a>
+        <a href="./LOG-IN.html" style="margin-left:550px;"><i>Sign In</i></a>
+        <a href="./SIGN-UP.html" style="padding:0 30px"><i>Sign Up</i></a>
+    </div>
+
+    <div>
+        <div style="display: flex;">
+            <img style="width: 600px; height: 600px" src="./ToniezzTony.mp3.png" alt="">
+            <div style="margin-top: 50px; margin-left: 240px;" class="login">
+                <form name='form-login'>
+    
+                    <h1>SIGN UP</h1>
+            
+                    <label for="name">Email</label>
+                    <input type="email" id="name" placeholder="Email" required>
+            
+                    <label for="pw">Password</label>
+                    <input type="password" id= "pw" placeholder="Password" required>
+                    
+                    <label for="pw"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password"  required>
+                  
+            
+                    <ul class="helper-text">
+                        <li class="length">Có ít nhất 8 kí tự.</li>
+                        <li class="lowercase">Có ít nhất 1 chữ in thường.</li>
+                        <li class="uppercase">Có ít nhất 1 chữ in hoa.</li>
+                        <li class="special">Có ít nhất 1 số hoặc 1 ký tự đặc biệt.</li>
+                    </ul>
+                    <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+                    <button onclick=""></button>
+                    <script>
+                        function signup(){
+                            let input_email = document.getElementById("email").value;
+                            let input_name = document.getElementById("name").value;
+                            let input_password = document.getElementById("password").value;
+                            let caseBlock = document.getElementById("checkCase");
+                            
+                            let listEmail=[];
+                            let listUsername=[];
+                            let listPassword=[];
+                            let loi= false;
+                            
+                
+                            if(JSON.parse(localStorage.getItem("listUsername") != null)){
+                                listUsername  = JSON.parse(localStorage.getItem("listUsername"));
+                            }
+                            if(JSON.parse(localStorage.getItem("listPassword") != null)){
+                                listPassword  = JSON.parse(localStorage.getItem("listPassword"));
+                            }
+                            if(JSON.parse(localStorage.getItem("listEmail") != null)){
+                                listEmail  = JSON.parse(localStorage.getItem("listEmail"));
+                            }
+                
+                            if (input_email ==""|| input_password ==""|| input_name ==""){
+                                console.log("Error");
+                                caseBlock.innerHTML="Vui lòng điền đầy đủ thông tin";
+                                caseBlock.style.color = "red";
+                            }
+                            else{
+                                for(let i=0; i<listEmail.length; i++)
+                                if (input_email == listEmail[i]){
+                                    console.log("error");
+                                    caseBlock.innerHTML="Tài khoản đã có trước! Vui lòng thử lại!";
+                                    caseBlock.style.color="red";
+                                    loi = true;
+                                }
+                            }
+                
+                            if(!loi){
+                                listEmail.push(input_email);
+                                listUsername.push(input_name);
+                                listPassword.push(input_password);
+                
+                                localStorage.setItem("listUsername", JSON.stringify(listUsername));
+                                localStorage.setItem("listPassword", JSON.stringify(listPassword));
+                                localStorage.setItem("listEmail", JSON.stringify(listEmail));
+                
+                                console.log("successfull");
+                                caseBlock.innerHTML = "Xin chúc mừng! Bạn đã đăng kí thành công!";
+                                caseBlock.style.color = "green";
+                                console.log("Email:", input_email);
+                                console.log("Name:" , input_name);
+                                console.log("Password:", input_password);
+                            }
+                        }
+                        
+                    </script>
+                </form>
+            </div>
+    </div>
+        
+</body>
+</html>
